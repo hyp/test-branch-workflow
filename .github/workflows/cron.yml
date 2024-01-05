@@ -13,3 +13,6 @@ jobs:
     uses: hyp/test-branch-workflow/.github/workflows/simple.yml@main
     with:
       snapshot: ${{ inputs.snapshot }}
+  matrix:
+    branch:
+      - main
