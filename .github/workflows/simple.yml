@@ -27,5 +27,6 @@ jobs:
       - run: echo "GH Input is ${{ github.events.inputs.snapshot }}."
       - name: List files in the repository
         run: |
+          echo "GH Input ${{ inputs.snapshot }} is ${{ github.events.inputs.snapshot }}."
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
