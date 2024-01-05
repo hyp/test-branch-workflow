@@ -1,5 +1,11 @@
 name: Invoked workflow demo
 on:
+  workflow_dispatch:
+    inputs:
+      snapshot:
+        description: 'Build Swift at a tagged snapshot'
+        default: false
+        type: boolean    
   workflow_call:
     inputs:
       snapshot:
