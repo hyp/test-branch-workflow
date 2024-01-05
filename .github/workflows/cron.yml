@@ -9,11 +9,7 @@ on:
         type: boolean   
 
 jobs:
-  call-workflow-passing-data:
-    uses: "hyp/test-branch-workflow/.github/workflows/simple.yml@${{matrix.branch}}"
-    with:
-      snapshot: ${{ inputs.snapshot }}
-    strategy:
-      matrix:
-        branch:
-          - main
+  call-workflow-main:
+    uses: hyp/test-branch-workflow/.github/workflows/simple.yml@main
+  call-workflow-510:
+    uses: hyp/test-branch-workflow/.github/workflows/simple.yml@release/5.10
