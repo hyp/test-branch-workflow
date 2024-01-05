@@ -1,7 +1,15 @@
 name: Call a reusable workflow
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      snapshot:
+        description: 'Build Swift at a tagged snapshot'
+        default: false
+        type: boolean   
 
 jobs:
-  call-workflow:
+  call-workflow-passing-data:
     uses: hyp/test-branch-workflow/.github/workflows/simple.yml@main
+    with:
+      snapshot: ${{ inputs.snapshot }}
