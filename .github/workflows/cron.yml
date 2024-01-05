@@ -2,7 +2,7 @@ name: Call a reusable workflow
 
 on:
   schedule:
-    - cron: "0/5 * * * *"
+    - cron: "*/1 * * * *"
   workflow_dispatch:
     inputs:
       snapshot:
