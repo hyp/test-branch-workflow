@@ -3,12 +3,6 @@ name: Call a reusable workflow
 on:
   schedule:
     - cron: "*/1 * * * *"
-  workflow_dispatch:
-    inputs:
-      snapshot:
-        description: 'Build Swift at a tagged snapshot'
-        default: false
-        type: boolean   
 
 jobs:
   call-workflow-main:
