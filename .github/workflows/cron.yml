@@ -1,9 +1,6 @@
 name: Call a reusable workflow
 
-on:
-  schedule:
-    - cron: "0 */6 * * *"
-  workflow_dispatch
+on: workflow_dispatch
 
 jobs:
   call-workflow:
