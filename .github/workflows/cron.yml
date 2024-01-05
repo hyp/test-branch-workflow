@@ -10,7 +10,7 @@ on:
 
 jobs:
   call-workflow-passing-data:
-    uses: hyp/test-branch-workflow/.github/workflows/simple.yml@${{ matrix.branch }}
+    uses: hyp/test-branch-workflow/.github/workflows/simple.yml@${{matrix.branch}}
     with:
       snapshot: ${{ inputs.snapshot }}
     strategy:
