@@ -3,15 +3,8 @@ name: Call a reusable workflow
 on:
   schedule:
     - cron: "0 */6 * * *"
-  workflow_dispatch:
-    inputs:
-      snapshot:
-        description: 'Build Swift at a tagged snapshot'
-        default: false
-        type: boolean
+  workflow_dispatch
 
 jobs:
-  call-workflow-passing-data:
+  call-workflow:
     uses: hyp/test-branch-workflow/.github/workflows/simple.yml@main
-    with:
-      snapshot: ${{ github.event.inputs.snapshot }}
