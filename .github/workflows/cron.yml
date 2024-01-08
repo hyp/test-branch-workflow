@@ -6,6 +6,6 @@ on:
 
 jobs:
   call-workflow-main:
-    uses: ./simple.yml@main
+    uses: ./.github/workflows/simple.yml@main
   call-workflow-510:
-    uses: ./simple.yml@release/5.10
+    uses: ./.github/workflows/simple.yml@release/5.10
